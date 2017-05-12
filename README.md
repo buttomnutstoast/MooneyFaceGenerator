@@ -49,7 +49,7 @@ We first fine-tune the facial recognition model by [openface](https://cmusatyala
 ```
 > DATA_ROOT=/path/to/root/dir/of/datasets TRAINED_MODEL_PATH=/path/to/gray/face/models sh scripts/mooney_train.sh
 ```
-The model should be save to `checkpoint/mooney_train/OPTION_ARGS/TIME_AND_DATE/model_20.t7`
+The new learned model would be save to `checkpoint/mooney_train/OPTION_ARGS/TIME_AND_DATE/model_20.t7`
 
 ### Generate Mooney faces
 Set `TRAINED_MODEL_PATH` to the trained mooney classifier (such as checkpoint/mooney_train/OPTION_ARGS/TIME_AND_DATE/model_20.t7).
