@@ -70,7 +70,7 @@ DATA_ROOT/
 ```
 
 ### Train the Mooney face classifier
-We first fine-tune the facial recognition model by [openface](https://cmusatyalab.github.io/openface/) for grayscale face classification. You can download the model from [here](https://www1.icsi.berkeley.edu/~twke/data/nn4small2v1_gray_face.t7) and then fine-tune it to mooney face classifier. Put the downloaded model to `$TRAINED_MODEL_PATH`.
+We first fine-tune the facial recognition model by [openface](https://cmusatyalab.github.io/openface/) for grayscale face classification. You can download the model from [here](https://www1.icsi.berkeley.edu/~twke/data/mooney_icip2017/nn4small2v1_gray_face.t7) and then fine-tune it to mooney face classifier. Put the downloaded model to `$TRAINED_MODEL_PATH`.
 ```
 > DATA_ROOT=/path/to/root/dir/of/datasets TRAINED_MODEL_PATH=/path/to/gray/face/models sh scripts/mooney_train.sh
 ```
@@ -99,7 +99,7 @@ Please follow the instruction and download Pix2Pix GAN from [https://github.com/
 You can,
 
 1. Use the faces generated from [here](https://github.com/buttomnutstoast/MooneyFaceGenerator/blob/master/README.md#generate-mooney-faces)
-2. Download our dataset from [here](https://www1.icsi.berkeley.edu/~twke/data/mooney_facescrub.tar)
+2. Download our dataset from [here](https://www1.icsi.berkeley.edu/~twke/data/mooney_icip2017/mooney_facescrub.tar)
 
 ---
 
