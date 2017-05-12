@@ -1,0 +1,13 @@
+th main.lua \
+-data $DATA_ROOT \
+-dataset facescrub_mooney \
+-epochSize 1 \
+-batchSize 1 \
+-imageSize 96 \
+-imageCrop 96 \
+-iterSize 1 \
+-nGPU 1 \
+-nDonkeys 1 \
+-nEpochs 1 \
+-netType facescrub_mooney \
+-test
