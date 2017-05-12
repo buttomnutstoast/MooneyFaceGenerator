@@ -69,6 +69,18 @@ DATA_ROOT/
 > Need to be finished
 ```
 
+* Download ImageNet
+```
+> Need to be finished
+```
+
+* Download Our Mooney Groun-Truth Data
+```
+> cd $DATA_ROOT
+> wget https://www1.icsi.berkeley.edu/~twke/data/mooney_icip2017/Mooney.tar
+> tar xvf Mooney.tar
+```
+
 ### Train the Mooney face classifier
 We first fine-tune the facial recognition model by [openface](https://cmusatyalab.github.io/openface/) for grayscale face classification. You can download the model from [here](https://www1.icsi.berkeley.edu/~twke/data/mooney_icip2017/nn4small2v1_gray_face.t7) and then fine-tune it to mooney face classifier. Put the downloaded model to `$TRAINED_MODEL_PATH`.
 ```
