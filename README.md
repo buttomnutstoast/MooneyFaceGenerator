@@ -45,16 +45,16 @@ Put the downloaded datasets to `DATA_ROOT`.
 ```
 
 ### Train the Mooney face classifier
-We first fine-tune the facial recognition model by [openface](https://cmusatyalab.github.io/openface/) for grayscale face classification. You can download the model from [here](#) and then fine-tune it to mooney face classifier. Put the downloaded model to `TRAINED_MODEL_PATH`.
+We first fine-tune the facial recognition model by [openface](https://cmusatyalab.github.io/openface/) for grayscale face classification. You can download the model from [here](https://www1.icsi.berkeley.edu/~twke/data/nn4small2v1_gray_face.t7) and then fine-tune it to mooney face classifier. Put the downloaded model to `TRAINED_MODEL_PATH`.
 ```
-> DATA_ROOT=/path/to/root/dir/of/datasets TRAINED_MODEL_PATH=/path/to/trained/models sh scripts/mooney_train.sh
+> DATA_ROOT=/path/to/root/dir/of/datasets TRAINED_MODEL_PATH=/path/to/gray/face/models sh scripts/mooney_train.sh
 ```
 The model should be save to `checkpoint/mooney_train/OPTION_ARGS/TIME_AND_DATE/model_20.t7`
 
 ### Generate Mooney faces
 Set `TRAINED_MODEL_PATH` to the trained mooney classifier (such as checkpoint/mooney_train/OPTION_ARGS/TIME_AND_DATE/model_20.t7).
 ```
-> DATA_ROOT=/path/to/root/dir/of/datasets TRAINED_MODEL_PATH=/path/to/trained/models sh scripts/mooney_train.sh
+> DATA_ROOT=/path/to/root/dir/of/datasets TRAINED_MODEL_PATH=/path/to/mooney/face/models sh scripts/mooney_train.sh
 ```
 The results will be saved into a hdf5 file which would be located at `checkpoint/facescrub_mooney/OPTION_ARGS/TIME_AND_DATE/testOutput_1.h5`
 
