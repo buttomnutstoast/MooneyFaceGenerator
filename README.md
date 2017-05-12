@@ -24,11 +24,12 @@ We provide source code of **Mooney faces generator** in this repository, and we 
 
 ### Getting Started
 * Install [torch and dependencies](https://github.com/torch/distro)
-* Install torch packages `cudnn`, `dpnn`
+* Install torch packages `cudnn`, `dpnn`, `hdf5`
 
 ```
 > luarocks install cudnn
 > luarocks install dpnn
+> luarocks install hdf5
 ```
 
 * Clone this repo
@@ -38,24 +39,30 @@ We provide source code of **Mooney faces generator** in this repository, and we 
 ```
 
 * Prepare the datasets
+Put the downloaded datasets to `DATA_ROOT`.
 ```
 > Need to be finished
 ```
 
 ### Train the Mooney face classifier
-We first fine-tune the facial recognition model by [openface](https://cmusatyalab.github.io/openface/) for grayscale face classification. You can download the model from [here](#) and then fine-tune it to mooney face classifier.
+We first fine-tune the facial recognition model by [openface](https://cmusatyalab.github.io/openface/) for grayscale face classification. You can download the model from [here](#) and then fine-tune it to mooney face classifier. Put the downloaded model to `TRAINED_MODEL_PATH`.
 ```
 > DATA_ROOT=/path/to/root/dir/of/datasets TRAINED_MODEL_PATH=/path/to/trained/models sh scripts/mooney_train.sh
 ```
+The model should be save to `checkpoint/mooney_train/OPTION_ARGS/TIME_AND_DATE/model_20.t7`
 
 ### Generate Mooney faces
+Set `TRAINED_MODEL_PATH` to the trained mooney classifier (such as checkpoint/mooney_train/OPTION_ARGS/TIME_AND_DATE/model_20.t7).
 ```
 > DATA_ROOT=/path/to/root/dir/of/datasets TRAINED_MODEL_PATH=/path/to/trained/models sh scripts/mooney_train.sh
 ```
+The results will be saved into a hdf5 file which would be located at `checkpoint/facescrub_mooney/OPTION_ARGS/TIME_AND_DATE/testOutput_1.h5`
+
 
 ### Filter most-likely Mooney candidates from each images
+Set `HDF5_RESULT` to the filepath of hdf5 file generate in the previous step.
 ```
-> Need to be finished
+> HDF5_RESULT=/path/to/hdf5/result th scripts/filter_by_mooneyness.lua -hdf5 $HDF5_RESULT
 ```
 
 ## Binary-to-Grayscale images predictor
@@ -66,10 +73,10 @@ Please follow the instruction and download Pix2Pix GAN from [https://github.com/
 ### Dataset prepration
 You can,
 
-1. Use the faces generated from 
-2. Download our dataset from [here](#)
+1. Use the faces generated from [here](https://github.com/buttomnutstoast/MooneyFaceGenerator/blob/master/README.md#generate-mooney-faces)
+2. Download our dataset from [here](https://www1.icsi.berkeley.edu/~twke/data/mooney_facescrub.tar)
 
 ---
 
 ## Acknowledgements
-We borrow code heavily from [Southmith](https://github.com/soumith/imagenet-multiGPU.torch). Also, we fine-tune the model `nn4small2v1` trained by [openface](https://cmusatyalab.github.io/openface/) to mooney face classifier.
+We borrow code heavily from [Soumith](https://github.com/soumith/imagenet-multiGPU.torch). Also, we fine-tune the model `nn4small2v1` trained by [openface](https://cmusatyalab.github.io/openface/) to mooney face classifier.
