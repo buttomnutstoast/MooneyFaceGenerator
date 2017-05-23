@@ -64,7 +64,7 @@ DATA_ROOT/
         ....
  ```
 
-* Download Cropped and Aligned Facescrub Dataset provided by [MegaFace](http://megaface.cs.washington.edu/participate/challenge.html)
+* Download Cropped and Aligned Facescrub Dataset provided by [MegaFace](http://megaface.cs.washington.edu/)
 ```
 > Need to be finished
 ```
