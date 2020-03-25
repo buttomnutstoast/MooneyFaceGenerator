@@ -111,7 +111,7 @@ Please follow the instruction and download Pix2Pix GAN from [https://github.com/
 You can,
 
 1. Use the faces generated from [here](https://github.com/buttomnutstoast/MooneyFaceGenerator/blob/master/README.md#generate-mooney-faces)
-2. Download our [Berkeley Mooney Dataset](https://www.dropbox.com/s/fvyibwbwcit87li/mooney_facescrub.tar?dl=0)
+2. Download our [Berkeley Mooney Dataset](https://drive.google.com/a/berkeley.edu/file/d/1MpqgoQFG5ZBXGdDYCpM4VUR0dzDuiYIw/view?usp=sharing)
 
 ---
 
