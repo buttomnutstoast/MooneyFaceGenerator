@@ -14,7 +14,7 @@ To address these issues, we propose two models:
 1. **Mooney faces generator**
 2. **Binary-to-Grayscale images predictor**
 
-We provide source code of **Mooney faces generator** in this repository, and we train a [Pix2Pix GAN](https://phillipi.github.io/pix2pix/) as **Binray-to-Grayscale images predictor**.
+We provide source code of **Mooney faces generator** in this repository, and we train a [Pix2Pix GAN](https://phillipi.github.io/pix2pix/) as **Binary-to-Grayscale images predictor**.
 
 ## Mooney faces generator
 
