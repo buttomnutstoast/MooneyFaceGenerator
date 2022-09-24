@@ -74,7 +74,7 @@ DATA_ROOT/
 > Need to be finished
 ```
 
-* Download Our Mooney Groun-Truth Data
+* Download Our Mooney Ground-Truth Data
 ```
 > cd $DATA_ROOT
 // down load from https://www.dropbox.com/s/rkogofo9pz92vla/Mooney.tar?dl=0
