@@ -14,7 +14,7 @@ To address these issues, we propose two models:
 1. **Mooney faces generator**
 2. **Binary-to-Grayscale images predictor**
 
-We provide source code of **Mooney faces generator** in this repository, and we train a [Pix2Pix GAN](https://phillipi.github.io/pix2pix/) as **Binray-to-Grayscale images predictor**.
+We provide source code of **Mooney faces generator** in this repository, and we train a [Pix2Pix GAN](https://phillipi.github.io/pix2pix/) as **Binary-to-Grayscale images predictor**.
 
 ## Mooney faces generator
 
@@ -74,7 +74,7 @@ DATA_ROOT/
 > Need to be finished
 ```
 
-* Download Our Mooney Groun-Truth Data
+* Download Our Mooney Ground-Truth Data
 ```
 > cd $DATA_ROOT
 // down load from https://www.dropbox.com/s/rkogofo9pz92vla/Mooney.tar?dl=0
